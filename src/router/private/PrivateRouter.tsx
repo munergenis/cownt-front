@@ -1,0 +1,28 @@
+import { Navigate, Route } from 'react-router-dom';
+
+import { AppLayout } from '@/layouts/AppLayout';
+import { AppRoutes } from '../AppRoutes';
+import { Cows } from '@/pages/Cows';
+import { Dashboard } from '@/pages/Dashboard';
+import { RoutesWithNotFound } from '../RoutesWithNotFound';
+
+export const PrivateRouter = () => {
+  return (
+    <RoutesWithNotFound>
+      <Route element={<AppLayout />}>
+        <Route
+          index
+          element={<Navigate to={AppRoutes.private.dashboard} />}
+        />
+        <Route
+          path={AppRoutes.private.dashboard}
+          element={<Dashboard />}
+        />
+        <Route
+          path={AppRoutes.private.cows}
+          element={<Cows />}
+        />
+      </Route>
+    </RoutesWithNotFound>
+  );
+};
