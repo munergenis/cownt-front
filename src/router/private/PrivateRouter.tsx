@@ -1,7 +1,8 @@
 import { Navigate, Route } from 'react-router-dom';
 
-import { AppLayout } from '@/layouts/AppLayout';
+import { AppLayout } from '@/layouts/AppLayout/AppLayout';
 import { AppRoutes } from '../AppRoutes';
+import { Charts } from '@/pages/Charts';
 import { Cows } from '@/pages/Cows';
 import { Dashboard } from '@/pages/Dashboard';
 import { RoutesWithNotFound } from '../RoutesWithNotFound';
@@ -17,6 +18,10 @@ export const PrivateRouter = () => {
         <Route
           path={AppRoutes.private.dashboard}
           element={<Dashboard />}
+        />
+        <Route
+          path={AppRoutes.private.charts}
+          element={<Charts />}
         />
         <Route
           path={AppRoutes.private.cows}
