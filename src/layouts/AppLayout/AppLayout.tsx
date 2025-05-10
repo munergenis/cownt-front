@@ -6,9 +6,9 @@ export const AppLayout = () => {
   const { logout } = useAuthContext();
 
   return (
-    <div className="h-screen flex flex-col">
+    <div className="h-screen overflow-hidden flex flex-col">
       <NavBar logout={logout} />
-      <main className="grow p-8">
+      <main className="grow p-8 overflow-auto">
         <Outlet />
       </main>
     </div>
