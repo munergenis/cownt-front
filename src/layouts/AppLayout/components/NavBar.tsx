@@ -11,7 +11,6 @@ export const NavBar = ({ logout }: NavBarProps) => {
     <nav className="px-8 py-2 flex justify-between items-center bg-secondary">
       <Link to={AbsolutePaths.private.root}>Cownt</Link>
       <Link to={AbsolutePaths.private.dashboard}>Dashboard</Link>
-      <Link to={AbsolutePaths.private.charts}>Charts</Link>
       <Link to={AbsolutePaths.private.cows}>Cows</Link>
       <Link to={AbsolutePaths.private.options}>Options</Link>
       <Button onClick={logout}>Logout</Button>

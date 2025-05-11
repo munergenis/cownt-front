@@ -2,7 +2,6 @@ import { Navigate, Route } from 'react-router-dom';
 
 import { AppLayout } from '@/layouts/AppLayout/AppLayout';
 import { AppRoutes } from '../AppRoutes';
-import { Charts } from '@/pages/Charts';
 import { Cows } from '@/pages/Cows';
 import { Dashboard } from '@/pages/Dashboard';
 import { Options } from '@/pages/Options';
@@ -19,10 +18,6 @@ export const PrivateRouter = () => {
         <Route
           path={AppRoutes.private.dashboard}
           element={<Dashboard />}
-        />
-        <Route
-          path={AppRoutes.private.charts}
-          element={<Charts />}
         />
         <Route
           path={AppRoutes.private.cows}

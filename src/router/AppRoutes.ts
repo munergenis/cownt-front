@@ -6,7 +6,6 @@ export const AppRoutes = {
   private: {
     root: '/private',
     dashboard: 'dashboard',
-    charts: 'charts',
     cows: 'cows',
     options: 'options',
   },
@@ -20,7 +19,6 @@ export const AbsolutePaths = {
   private: {
     root: AppRoutes.private.root,
     dashboard: `${AppRoutes.private.root}/${AppRoutes.private.dashboard}`,
-    charts: `${AppRoutes.private.root}/${AppRoutes.private.charts}`,
     cows: `${AppRoutes.private.root}/${AppRoutes.private.cows}`,
     options: `${AppRoutes.private.root}/${AppRoutes.private.options}`,
   },

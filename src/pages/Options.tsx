@@ -2,7 +2,7 @@ import type { Breed } from '@/models/breeds';
 import { Button } from '@/components/common/Button';
 import type { Characteristic } from '@/models/characteristics';
 import { PreviewCard } from '@/components/common/PreviewCard';
-import type { ReactNode } from 'react';
+import { renderContent } from '@/utils/utils';
 import { useFetch } from '@/hooks/useFetch';
 
 export const Options = () => {
@@ -18,17 +18,6 @@ export const Options = () => {
     error: characteristicsError,
     refetch: refetchCharacteristics,
   } = useFetch<Characteristic[]>('/cows/characteristics');
-
-  const renderContent = (
-    isLoading: boolean,
-    error: string | null,
-    content: ReactNode
-  ) => {
-    if (isLoading) return <div>loading</div>;
-    if (error) return <div>Error!!</div>;
-
-    return content;
-  };
 
   return (
     <div className="space-y-4">
