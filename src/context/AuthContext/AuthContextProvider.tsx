@@ -2,7 +2,7 @@ import { useState, type PropsWithChildren } from 'react';
 import { AuthContext } from './AuthContext';
 
 export const AuthContextProvider = ({ children }: PropsWithChildren) => {
-  const [authenticated, setAuthenticated] = useState(false);
+  const [authenticated, setAuthenticated] = useState(true);
 
   const login = () => {
     setAuthenticated(true);
