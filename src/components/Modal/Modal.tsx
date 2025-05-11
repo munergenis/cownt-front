@@ -1,3 +1,4 @@
+import { ModalContent } from './components/ModalContent';
 import { ModalOverlay } from './components/ModalOverlay';
 import type { PropsWithChildren } from 'react';
 import { createPortal } from 'react-dom';
@@ -10,15 +11,7 @@ export const Modal = ({ children }: PropsWithChildren) => {
 
   return createPortal(
     <ModalOverlay>
-      <div className="relative p-8 rounded-lg bg-secondary">
-        {children}
-        <button
-          className="absolute -top-1 right-0 w-12 h-12 text-2xl p-0"
-          onClick={hideModal}
-        >
-          &times;
-        </button>
-      </div>
+      <ModalContent hideModal={hideModal}>{children}</ModalContent>
     </ModalOverlay>,
     modalRoot
   );
