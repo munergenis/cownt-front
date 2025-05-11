@@ -13,6 +13,7 @@ export const NavBar = ({ logout }: NavBarProps) => {
       <Link to={AbsolutePaths.private.dashboard}>Dashboard</Link>
       <Link to={AbsolutePaths.private.charts}>Charts</Link>
       <Link to={AbsolutePaths.private.cows}>Cows</Link>
+      <Link to={AbsolutePaths.private.options}>Options</Link>
       <Button onClick={logout}>Logout</Button>
     </nav>
   );

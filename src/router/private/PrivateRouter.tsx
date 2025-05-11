@@ -5,6 +5,7 @@ import { AppRoutes } from '../AppRoutes';
 import { Charts } from '@/pages/Charts';
 import { Cows } from '@/pages/Cows';
 import { Dashboard } from '@/pages/Dashboard';
+import { Options } from '@/pages/Options';
 import { RoutesWithNotFound } from '../RoutesWithNotFound';
 
 export const PrivateRouter = () => {
@@ -26,6 +27,10 @@ export const PrivateRouter = () => {
         <Route
           path={AppRoutes.private.cows}
           element={<Cows />}
+        />
+        <Route
+          path={AppRoutes.private.options}
+          element={<Options />}
         />
       </Route>
     </RoutesWithNotFound>
