@@ -7,7 +7,7 @@ interface CowItemProps {
 export const CowItem = ({ cow }: CowItemProps) => {
   return (
     <div>
-      <h2>{cow.longCode}</h2>
+      <h3>{cow.longCode}</h3>
       <small>{cow.origin}</small>
     </div>
   );
