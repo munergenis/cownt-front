@@ -1,5 +1,5 @@
 import { AppRoutes } from '../router/AppRoutes';
-import { Button } from '@/components/common/Button';
+import { Button } from '@/shared/components/Button';
 import { Navigate } from 'react-router-dom';
 import { useAuthContext } from '@/context/AuthContext/AuthContext';
 

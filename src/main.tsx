@@ -1,11 +1,14 @@
 import './index.css';
 
-import App from './App.tsx';
+import { AppRouter } from './router/AppRouter.tsx';
+import Providers from './Providers.tsx';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+    <Providers>
+      <AppRouter />
+    </Providers>
   </StrictMode>
 );

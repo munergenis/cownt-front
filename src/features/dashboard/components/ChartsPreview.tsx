@@ -1,4 +1,4 @@
-import { PreviewCard } from '../common/PreviewCard';
+import { PreviewCard } from '@/shared/components/PreviewCard';
 
 export const ChartsPreview = () => {
   return (

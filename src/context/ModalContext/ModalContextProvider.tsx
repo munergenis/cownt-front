@@ -5,7 +5,7 @@ import {
   type ReactNode,
 } from 'react';
 import { ModalContext } from './ModalContext';
-import { Modal } from '@/components/Modal/Modal';
+import { Modal } from '@/shared/components/Modal/Modal';
 
 export const ModalContextProvider = ({ children }: PropsWithChildren) => {
   const [content, setContent] = useState<ReactNode | null>(null);

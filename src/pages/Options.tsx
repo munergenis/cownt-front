@@ -1,9 +1,9 @@
-import type { Breed } from '@/models/breeds';
-import { Button } from '@/components/common/Button';
-import type { Characteristic } from '@/models/characteristics';
-import { PreviewCard } from '@/components/common/PreviewCard';
-import { renderContent } from '@/utils/utils';
-import { useFetch } from '@/hooks/useFetch';
+import type { Breed } from '@/features/cows/interfaces/breeds';
+import { Button } from '@/shared/components/Button';
+import type { Characteristic } from '@/features/cows/interfaces/characteristics';
+import { PreviewCard } from '@/shared/components/PreviewCard';
+import { renderContent } from '@/shared/lib/utils';
+import { useFetch } from '@/shared/hooks/useFetch';
 
 export const Options = () => {
   const {

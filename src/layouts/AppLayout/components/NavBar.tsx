@@ -1,7 +1,7 @@
 import { Link, NavLink } from 'react-router-dom';
 
 import { AbsolutePaths } from '@/router/AppRoutes';
-import { Button } from '@/components/common/Button';
+import { Button } from '@/shared/components/Button';
 
 interface NavBarProps {
   logout: () => void;

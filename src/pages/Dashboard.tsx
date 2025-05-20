@@ -1,4 +1,4 @@
-import { ChartsPreview } from '@/components/Dashboard/ChartsPreview';
+import { ChartsPreview } from '@/features/dashboard/components/ChartsPreview';
 
 export const Dashboard = () => {
   return (
