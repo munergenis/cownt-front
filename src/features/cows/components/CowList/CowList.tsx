@@ -1,17 +1,18 @@
-import type { Cow } from '@/cows/interfaces/cow';
 import { CowItem } from '../CowItem/CowItem';
+import type { CowRaw } from '../../interfaces/cow';
 
 interface CowListProps {
-  cows: Cow[];
+  cows: CowRaw[];
 }
 
 export const CowList = ({ cows }: CowListProps) => {
   return (
-    <div>
+    <div className="flex flex-col gap-y-4">
       {cows.map((cow) => (
-        <a key={cow.id}>
-          <CowItem cow={cow} />
-        </a>
+        <CowItem
+          key={cow.id}
+          cow={cow}
+        />
       ))}
     </div>
   );

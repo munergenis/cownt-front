@@ -1,16 +1,13 @@
 @import 'tailwindcss';
 
 @theme {
-  --color-primary: oklch(71.4% 0.203 305.504); /* var(--color-purple-400) */
-  --color-secondary: oklch(97.7% 0.014 308.299); /* var(--color-purple-50) */
+  /* --color-primary: oklch(71.4% 0.203 305.504); var(--color-purple-400) */
+  /* --color-secondary: oklch(97.7% 0.014 308.299); var(--color-purple-50) */
+  --color-primary: var(--color-emerald-600);
+  --color-secondary: var(--color-emerald-50);
 }
 
 @layer base {
-  h2 {
-    font-size: var(--text-4xl);
-    font-weight: var(--font-weight-semibold);
-  }
-
   h3 {
     font-size: var(--text-2xl);
   }

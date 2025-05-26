@@ -1,47 +1,33 @@
-import type { Breed } from '@/features/cows/interfaces/breeds';
-import { Button } from '@/shared/components/Button';
-import type { Characteristic } from '@/features/cows/interfaces/characteristics';
-import { PreviewCard } from '@/shared/components/PreviewCard';
-import { renderContent } from '@/shared/lib/utils';
-import { useFetch } from '@/shared/hooks/useFetch';
+import { Card } from '@/shared/components/Card';
+import { H2 } from '@/shared/components/H2';
+import { QueryBoundary } from '@/shared/components/QueryBoundary';
+import { useCowBreeds } from '@/features/cows/hooks/useCowBreeds';
+import { useCowCharacteristics } from '@/features/cows/hooks/useCowCharacteristics';
 
 export const Options = () => {
-  const {
-    data: breeds,
-    isLoading: isLoadingBreeds,
-    error: breedsError,
-    refetch: refetchBreeds,
-  } = useFetch<Breed[]>('/cows/breeds');
-  const {
-    data: characteristics,
-    isLoading: isLoadingCharacteristics,
-    error: characteristicsError,
-    refetch: refetchCharacteristics,
-  } = useFetch<Characteristic[]>('/cows/characteristics');
+  const { cowBreedsQuery } = useCowBreeds();
+  const { cowCharacteristicsQuery } = useCowCharacteristics();
 
   return (
     <div className="space-y-4">
+      <H2>Opcions</H2>
       <h2>Breeds</h2>
-      <PreviewCard>
-        <Button onClick={refetchBreeds}>Refresh</Button>
-        {renderContent(
-          isLoadingBreeds,
-          breedsError,
-          breeds?.map((breed) => <div key={breed.id}>{breed.value}</div>)
-        )}
-      </PreviewCard>
+      <Card>
+        <QueryBoundary query={cowBreedsQuery}>
+          {({ breeds }) =>
+            breeds.map((breed) => <div key={breed.id}>{breed.value}</div>)
+          }
+        </QueryBoundary>
+      </Card>
 
       <h2>Characteristics</h2>
-      <PreviewCard>
-        <Button onClick={refetchCharacteristics}>Refresh</Button>
-        {renderContent(
-          isLoadingCharacteristics,
-          characteristicsError,
-          characteristics?.map((charac) => (
-            <div key={charac.id}>{charac.value}</div>
-          ))
-        )}
-      </PreviewCard>
+      <Card>
+        <QueryBoundary query={cowCharacteristicsQuery}>
+          {({ characteristics }) =>
+            characteristics.map((char) => <div key={char.id}>{char.value}</div>)
+          }
+        </QueryBoundary>
+      </Card>
     </div>
   );
 };

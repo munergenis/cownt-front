@@ -9,8 +9,7 @@ export const Login = () => {
   return authenticated ? (
     <Navigate to={AppRoutes.private.root} />
   ) : (
-    <div>
-      <h2>Login</h2>
+    <div className="flex flex-col items-center justify-center h-screen">
       <Button onClick={login}>Login</Button>
     </div>
   );

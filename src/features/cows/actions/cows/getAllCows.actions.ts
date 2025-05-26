@@ -1,8 +1,8 @@
-import type { Cow } from '@/cows/interfaces/cow';
+import type { CowRaw } from '../../interfaces/cow';
 import { cowntApi } from '@/shared/api/cowntApi';
 
 export const getAllCows = async () => {
-  const { data } = await cowntApi.get<Cow[]>('/cows');
+  const { data } = await cowntApi.get<CowRaw[]>('/cows');
 
   return { cows: data };
 };

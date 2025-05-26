@@ -6,9 +6,9 @@ interface PreviewCardProps {
   children: ReactNode;
 }
 
-export const PreviewCard = ({ children, className }: PreviewCardProps) => {
+export const Card = ({ children, className }: PreviewCardProps) => {
   return (
-    <div className={clsx('w-full bg-secondary rounded-md p-4', className)}>
+    <div className={clsx('bg-secondary rounded-md p-4', className)}>
       {children}
     </div>
   );
