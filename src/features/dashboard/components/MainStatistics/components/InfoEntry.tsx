@@ -49,7 +49,7 @@ export const InfoEntry = ({
       <div
         className={`relative flex justify-center items-baseline font-black ${stylesDict[size].mainInfo}`}
       >
-        {mainInfo ?? '-'}{' '}
+        {mainInfo ?? <span>&ndash;</span>}{' '}
         <span
           className={`absolute bottom-0 right-0 translate-x-0 font-thin opacity-0 group-hover/info:translate-x-1/1 group-hover/info:opacity-100 ${stylesDict[size].subtitle} transition-all`}
         >
