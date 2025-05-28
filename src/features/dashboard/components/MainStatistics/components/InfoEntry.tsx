@@ -44,12 +44,12 @@ export const InfoEntry = ({
 }: InfoEntryProps) => {
   return (
     <div
-      className={`group/info py-4 flex flex-col items-center z-0 ${className}`}
+      className={`group/info scale-75 md:scale-90 lg:scale-100 py-4 flex flex-col items-center z-0 ${className}`}
     >
       <div
         className={`relative flex justify-center items-baseline font-black ${stylesDict[size].mainInfo}`}
       >
-        {mainInfo ?? <span>&ndash;</span>}{' '}
+        {mainInfo ?? <span>&ndash;</span>}
         <span
           className={`absolute bottom-0 right-0 translate-x-0 font-thin opacity-0 group-hover/info:translate-x-1/1 group-hover/info:opacity-100 ${stylesDict[size].subtitle} transition-all`}
         >
@@ -57,7 +57,7 @@ export const InfoEntry = ({
         </span>
       </div>
       <div
-        className={`font-black uppercase text-primary scale-x-110 -translate-y-2 opacity-50 group-hover/info:scale-100 group-hover/info:translate-y-0 group-hover/info:opacity-100 transition-all ${stylesDict[size].title}`}
+        className={`font-black uppercase text-center text-primary scale-x-110 -translate-y-2 opacity-50 group-hover/info:scale-100 group-hover/info:translate-y-0 group-hover/info:opacity-100 transition-all ${stylesDict[size].title}`}
       >
         {title}
       </div>

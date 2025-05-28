@@ -23,20 +23,20 @@ export const Dashboard = () => {
             higherAvgCow,
             lowerAvgCow,
             maxLastBirthCow,
+            totalReproductiveCows,
+            totalZeroBirthCows,
+            totalOnePlusBirthsCows,
           }) => (
             <div className="flex flex-col gap-y-4">
-              <h3 className="uppercase font-black text-neutral-500 -translate-x-2 translate-y-8">
-                Estadístiques
-              </h3>
               <MainStatistics
                 averageOfAverages={averageOfAverages}
                 higherAvgCow={higherAvgCow}
                 lowerAvgCow={lowerAvgCow}
                 maxLastBirth={maxLastBirthCow}
+                totalReproductiveCows={totalReproductiveCows}
+                totalZeroBirthCows={totalZeroBirthCows}
+                totalOnePlusBirthsCows={totalOnePlusBirthsCows}
               />
-              <h3 className="uppercase font-black text-neutral-500 -translate-x-2 translate-y-8">
-                Vaques
-              </h3>
               <CowStatisticsList cows={cows} />
             </div>
           )}

@@ -18,7 +18,7 @@ const initialFilters: CowFilter = {
   origin: '',
   breed: '',
   childs: '',
-  absence: '',
+  absence: null,
   characteristics: [],
 };
 

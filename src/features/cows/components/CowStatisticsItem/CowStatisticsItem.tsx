@@ -27,6 +27,12 @@ export const CowStatisticsItem = ({ cow }: CowStatisticsItemProps) => {
             subtitle="dies"
             size="sm"
           />
+          <InfoEntry
+            mainInfo={cow.children.length}
+            title="Total Parts"
+            subtitle="parts"
+            size="sm"
+          />
           {/* TODO: Afegir vaca sense parts que passa el llindar de dies esperats per primer part.
 
             cow.lastInterval === null && vaca sense parts desde X dies (inici edat reproducció fins avui) 

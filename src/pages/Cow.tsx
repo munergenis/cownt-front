@@ -9,8 +9,6 @@ export const Cow = () => {
   const { id } = useParams<{ id: string }>();
   const { cowQuery } = useCow(id!);
 
-  console.log(cowQuery.data?.cow);
-
   return (
     <>
       <H2>Detall</H2>

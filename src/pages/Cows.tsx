@@ -40,6 +40,8 @@ export const Cows = () => {
         </Button>
       </div>
 
+      <h3 className="text-right">{filteredCows.length} Vaques</h3>
+
       <QueryBoundary
         query={cowsQuery}
         loadingElement={<LoadingCow />}

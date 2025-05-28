@@ -76,7 +76,10 @@ export const CowDetails = ({ cow }: CowDetailsProps) => {
           </Link>
         )}
         {cow.children.map((child, idx) => (
-          <Link to={`${AbsolutePaths.private.cows}/${child.id}`}>
+          <Link
+            key={`${cow.id}-${child.id}`}
+            to={`${AbsolutePaths.private.cows}/${child.id}`}
+          >
             Veure Fill {idx + 1} &rarr;
           </Link>
         ))}

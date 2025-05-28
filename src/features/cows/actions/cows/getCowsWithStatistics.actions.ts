@@ -32,11 +32,28 @@ export const getCowsWithStatistics = async () => {
     }
   }, data.cows[0]);
 
+  const totalReproductiveCows = data.cows.length;
+
+  const { totalOnePlusBirthsCows, totalZeroBirthCows } = data.cows.reduce(
+    (total, currCow) => {
+      if (currCow.children.length === 0) {
+        total.totalZeroBirthCows = total.totalZeroBirthCows + 1;
+      } else {
+        total.totalOnePlusBirthsCows = total.totalOnePlusBirthsCows + 1;
+      }
+      return total;
+    },
+    { totalZeroBirthCows: 0, totalOnePlusBirthsCows: 0 }
+  );
+
   return {
     cows: data.cows,
     averageOfAverages: data.averageOfAverages,
     lowerAvgCow,
     higherAvgCow,
     maxLastBirthCow,
+    totalReproductiveCows,
+    totalZeroBirthCows,
+    totalOnePlusBirthsCows,
   };
 };
