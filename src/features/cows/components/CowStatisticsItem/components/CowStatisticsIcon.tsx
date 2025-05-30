@@ -17,7 +17,7 @@ export const CowStatisticsIcon = ({ cow }: CowStatisticsIconProps) => {
         alt={`Icona de vaca ${sexLabels[cow.sex]}`}
       />
       <div className="flex flex-col">
-        <h3 className="font-semibold">{cow.shortCode}</h3>
+        <span className="text-2xl font-semibold">{cow.shortCode}</span>
         <span className="text-sm text-gray-600 opacity-0 -translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all">
           {cow.longCode}
         </span>

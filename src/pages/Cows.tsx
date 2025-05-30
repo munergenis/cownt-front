@@ -40,7 +40,7 @@ export const Cows = () => {
         </Button>
       </div>
 
-      <h3 className="text-right">{filteredCows.length} Vaques</h3>
+      <div className="text-2xl text-right">{filteredCows.length} Vaques</div>
 
       <QueryBoundary
         query={cowsQuery}

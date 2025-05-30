@@ -1,5 +1,6 @@
 import { Card } from '@/shared/components/Card';
 import type { CowWithStatistics } from '@/features/cows/interfaces/cow';
+import { H3 } from '@/shared/components/H3';
 import { InfoEntry } from './components/InfoEntry';
 
 interface MainStatisticsProps {
@@ -23,9 +24,7 @@ export const MainStatistics = ({
 }: MainStatisticsProps) => {
   return (
     <>
-      <h3 className="uppercase font-black text-neutral-500 -translate-x-2 translate-y-8">
-        Estadístiques
-      </h3>
+      <H3 className="-translate-x-2 translate-y-8">Estadístiques</H3>
       <Card>
         <div className="grid grid-cols-1 md:grid-cols-3 max-w-5xl mx-auto">
           <InfoEntry

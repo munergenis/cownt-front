@@ -26,7 +26,7 @@ export const CowItem = ({ cow }: CowItemProps) => {
         <div className="flex flex-col">
           {/* CODES */}
           <div className="flex flex-col">
-            <h3>{cow.longCode}</h3>
+            <span className="text-2xl">{cow.longCode}</span>
             <span>{cow.shortCode}</span>
           </div>
 

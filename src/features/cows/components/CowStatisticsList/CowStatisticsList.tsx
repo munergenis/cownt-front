@@ -1,6 +1,7 @@
 import { CowStatisticsFilters } from '../Filters/CowStatisticsFilters';
 import { CowStatisticsItem } from '../CowStatisticsItem/CowStatisticsItem';
 import type { CowWithStatistics } from '../../interfaces/cow';
+import { H3 } from '@/shared/components/H3';
 import { useFilterCowStatistics } from '../../hooks/useFilterCowStatistics';
 
 interface CowStatisticsListProps {
@@ -13,9 +14,7 @@ export const CowStatisticsList = ({ cows }: CowStatisticsListProps) => {
 
   return (
     <>
-      <h3 className="uppercase font-black text-neutral-500 -translate-x-2 translate-y-8">
-        Vaques
-      </h3>
+      <H3 className=" -translate-x-2 translate-y-8">Vaques</H3>
 
       <CowStatisticsFilters
         filters={filters}

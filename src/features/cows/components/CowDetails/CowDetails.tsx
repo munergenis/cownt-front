@@ -30,7 +30,7 @@ export const CowDetails = ({ cow }: CowDetailsProps) => {
         </div>
         {/* CODES */}
         <div className="flex flex-col">
-          <h3 className="font-bold">{cow.longCode}</h3>
+          <span className="text-2xl font-bold">{cow.longCode}</span>
           <span className="italic">{cow.shortCode}</span>
         </div>
       </div>
