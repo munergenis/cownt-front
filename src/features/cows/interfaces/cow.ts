@@ -36,7 +36,8 @@ export interface CowsStatisticsResponse {
 export interface CowWithStatistics extends Omit<CowRaw, 'children'> {
   children: StatisticsChild[];
   birthAverageDays: number | null;
-  lastIntervalDays: number;
+  lastIntervalDays: number | null;
+  reproductiveIntervalDays: number | null;
 }
 
 export interface StatisticsChild {

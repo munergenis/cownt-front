@@ -14,7 +14,7 @@ export const CowStatisticsItem = ({ cow }: CowStatisticsItemProps) => {
       <div className="group bg-secondary p-4 rounded-sm flex flex-col md:flex-row items-center gap-4">
         <CowStatisticsIcon cow={cow} />
 
-        <div className="flex gap-4 justify-around w-full">
+        <div className="grid grid-cols-3 gap-4 justify-around w-full">
           <InfoEntry
             mainInfo={cow.birthAverageDays}
             title="Mitjana Parts"
@@ -22,8 +22,8 @@ export const CowStatisticsItem = ({ cow }: CowStatisticsItemProps) => {
             size="sm"
           />
           <InfoEntry
-            mainInfo={cow.lastIntervalDays}
-            title="Ultim Part"
+            mainInfo={cow.lastIntervalDays ?? cow.reproductiveIntervalDays}
+            title={`Part ${cow.children.length}`}
             subtitle="dies"
             size="sm"
           />
