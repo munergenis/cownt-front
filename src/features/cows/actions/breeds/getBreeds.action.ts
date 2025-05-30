@@ -4,5 +4,9 @@ import { cowntApi } from '@/shared/api/cowntApi';
 export const getBreeds = async () => {
   const { data } = await cowntApi.get<Breed[]>('/cows/breeds');
 
-  return { breeds: data };
+  const sortedBreeds = data.sort((a, b) =>
+    a.value.localeCompare(b.value, 'ca', { sensitivity: 'base' })
+  );
+
+  return { breeds: sortedBreeds };
 };

@@ -6,5 +6,9 @@ export const getCharacteristics = async () => {
     '/cows/characteristics'
   );
 
-  return { characteristics: data };
+  const sortedCharacteristics = data.sort((a, b) =>
+    a.value.localeCompare(b.value, 'ca', { sensitivity: 'base' })
+  );
+
+  return { characteristics: sortedCharacteristics };
 };
