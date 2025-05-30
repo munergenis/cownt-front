@@ -15,7 +15,7 @@ export const CowStatisticsFilters = ({
   setFilters,
 }: CowStatisticsFiltersProps) => {
   return (
-    <Card>
+    <Card title="Vaques">
       <div className="flex flex-col gap-2">
         <div className="flex gap-2">
           <label htmlFor="">Codi</label>

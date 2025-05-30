@@ -11,8 +11,7 @@ export const Options = () => {
   return (
     <div className="space-y-4">
       <H2>Opcions</H2>
-      <h2>Breeds</h2>
-      <Card>
+      <Card title="Races">
         <QueryBoundary query={cowBreedsQuery}>
           {({ breeds }) =>
             breeds.map((breed) => <div key={breed.id}>{breed.value}</div>)
@@ -20,8 +19,7 @@ export const Options = () => {
         </QueryBoundary>
       </Card>
 
-      <h2>Characteristics</h2>
-      <Card>
+      <Card title="Característiques">
         <QueryBoundary query={cowCharacteristicsQuery}>
           {({ characteristics }) =>
             characteristics.map((char) => <div key={char.id}>{char.value}</div>)
